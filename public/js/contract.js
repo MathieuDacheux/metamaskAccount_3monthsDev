@@ -27,7 +27,7 @@ const initialize = () => {
 
   // Début du processus d'onboarding
   const onClickInstall = () => {
-    onboardButton.innerText = 'Le processus est en cours';
+    onboardButton.innerText = 'Process is onboarding';
     onboardButton.disabled = true;
     onboarding.startOnboarding();
   };
@@ -45,12 +45,12 @@ const initialize = () => {
     // Check si l'extension n'est pas installée
     if (!isMetaMaskInstalled()) {
       // Si elle n'est pas installé, au click renvoie vers la page de téléchargement
-      onboardButton.innerText = 'Cliquez-ici pour installer MetaMask';
+      onboardButton.innerText = 'Click here to install MetaMask';
       onboardButton.onclick = onClickInstall;
       onboardButton.disabled = false;
     } else {
       // Si elle est installée, connectez l'utilisateur à son wallet MetaMask
-      onboardButton.innerText = 'Connectez vous au WEB 3';
+      onboardButton.innerText = 'Connect to WEB 3';
       onboardButton.onclick = onClickConnect;
       onboardButton.disabled = false;
     }
